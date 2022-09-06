@@ -1,0 +1,52 @@
+<div class='container'>
+    <form  (ngSubmit)="submit()">
+      <div class="mb-3">
+        <label class="form-label">Nombre</label>
+        <input type="text" #nombre="ngModel" [(ngModel)]="patient.nombre"  class="form-control" name='nombre' ngModel  required />
+        <small *ngIf="!nombre.valid && nombre.touched" style="color: red ;">Campo Obligatorio</small>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Rut</label>
+        <input type="text" #rut="ngModel" [(ngModel)]="patient.rut" class="form-control" name='rut'  required />
+        <small *ngIf="!rut.valid && rut.touched" style="color: red ;">Campo Obligatorio</small>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Edad</label>
+        <input type="number" [(ngModel)]="patient.edad" class="form-control" name='edad'  />
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Sexo</label>
+        <select class="form-select" [(ngModel)]="patient.sexo" name='sexo' >
+          <option value=""></option>
+          <option value="Masculino">Masculino</option>
+          <option value="Femenino">Femenino</option>
+          <option value="Otro">Otro</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">enfermadad</label>
+        <input type="text" class="form-control" name='enfermedad'  [(ngModel)]="patient.enfermedad" />
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Fotogrfía</label>
+        <input
+        class="form-control"
+          accept="image/*"
+          id="raised-button-file"
+          type="file"
+          (change) = "onFileSelected($event)"
+        />
+      </div>
+      <div class="mb-3">
+        <button class='btn btn-primary' type='submit'>Enviar</button>
+      </div>
+    </form>
+  </div>
+
+  <!-- <div class="mb-4 row">
+    <label for="fecha" class="col-sm-4 col-form-label">Enfermedad</label>
+    <div class="col-sm-8">
+      <input type="text" name="enfermedad" #enfermedad="ngModel" [(ngModel)]="paciente.enfermedad" class="form-control" id="rut" placeholder="Enfermedad" pattern="[a-zA-Z]+">
+      <small *ngIf="!enfermedad.valid && enfermedad.touched;" class="invalid">Enfermedad inválida - (Obligatorio)</small>
+    </div>
+  </div> -->

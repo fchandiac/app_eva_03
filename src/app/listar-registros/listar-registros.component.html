@@ -1,0 +1,14 @@
+<div class="container">
+    <div *ngFor="let item of patients">
+        <div class="card mb-2 mt-2">
+            <div class="card-body">
+                <h5 class="card-title">Nombre: {{item.nombre}}</h5>
+                <p class="card-text">rut: {{item.rut}}</p>
+                <p class="card-text"> edad: {{item.edad}}</p>
+                <p class="card-text">
+                    <a routerLink="/resgistro/detalle/{{item._id}}">Detalle</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

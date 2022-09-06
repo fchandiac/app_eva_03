@@ -1,0 +1,42 @@
+<div class='container'>
+    <form (ngSubmit)="submit()">
+      <div class="mb-3">
+        <label class="form-label">Nombre</label>
+        <input type="text" [(ngModel)]="patient.nombre"  class="form-control" name='nombre'  required />
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Rut</label>
+        <input type="text" [(ngModel)]="patient.rut" class="form-control" name='rut'  required />
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Edad</label>
+        <input type="number" [(ngModel)]="patient.edad" class="form-control" name='edad'  />
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Sexo</label>
+        <select class="form-select" [(ngModel)]="patient.sexo" name='sexo' >
+          <option value=""></option>
+          <option value="Masculino">Masculino</option>
+          <option value="Femenino">Femenino</option>
+          <option value="Otro">Otro</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">enfermadad</label>
+        <input type="text" class="form-control" name='enfermedad'  [(ngModel)]="patient.enfermedad" />
+      </div>
+      <!-- <div class="mb-3">
+        <label class="form-label">Fotogrfía</label>
+        <input
+        class="form-control"
+          accept="image/*"
+          id="raised-button-file"
+          type="file"
+          (change) = "onFileSelected($event)"
+        />
+      </div> -->
+      <div class="mb-3">
+        <button class='btn btn-primary' type='submit'>Enviar</button>
+      </div>
+    </form>
+  </div>

@@ -1,0 +1,17 @@
+<div class='container'>
+    <div class="card mt-2">
+        <img class="card-img-top" src="{{patient.fotoPersonal}}" />
+        <div class="card-body">
+            <h5 class="card-title">Nombre: {{patient.nombre}}</h5>
+            <p class="card-text">rut: {{patient.rut}}</p>
+            <p class="card-text"> edad: {{patient.edad}}</p>
+            <p class="card-text"> sexo: {{patient.sexo}}</p>
+            <p class="card-text">enfermadad: {{patient.enfermedad}}</p>
+            <div style="display:flex">
+                <a type="button" class="btn btn-secondary" routerLink="/resgistro/actualizar/{{id}}">actualizar</a>
+                
+                <button class="btn btn-primary" style="margin-left: 15px;" (click)="destroy()">Eliminar</button>
+            </div>
+        </div>
+    </div>
+</div>
